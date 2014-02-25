@@ -31,7 +31,7 @@ NSString * const kOauth2ClientAccountType = @"Feedly";
 //clientId
 static NSString * const kOauth2ClientClientId = @"sandbox";
 //Client Secret
-static NSString * const kOauth2ClientClientSecret = @"CM786L1D4P3M9VYUPOB8";
+static NSString * const kOauth2ClientClientSecret = @"EDIT_CLIENT_SECRET";
 //Redirect Url
 static NSString * const kOauth2ClientRedirectUrl = @"http://localhost";
 //base url
