@@ -1,8 +1,9 @@
 //
-//  NTAppDelegate.h
+//  NTAuthWebViewController.h
 //  FeedlyClientExample
 //
-//  Copyright (c) 2014年 Naoyuki Takura. All rights reserved.
+// Copyright (c) 2014 Naoyuki Takura
+//
 // Permission is hereby granted, free of charge, to any person obtaining a copy of
 // this software and associated documentation files (the "Software"), to deal in
 // the Software without restriction, including without limitation the rights to
@@ -20,12 +21,9 @@
 // IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
 // CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
+
 #import <UIKit/UIKit.h>
 
-extern NSString * const kOauth2ClientAccountType;
-
-@interface NTAppDelegate : UIResponder <UIApplicationDelegate>
-
-@property (strong, nonatomic) UIWindow *window;
+@interface NTAuthWebViewController : UIViewController
 
 @end

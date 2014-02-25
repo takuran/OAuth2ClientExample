@@ -21,6 +21,8 @@
 		6E6B40BE18B97BC9001E827B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E6B40A018B97BC9001E827B /* UIKit.framework */; };
 		6E6B40C618B97BC9001E827B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6E6B40C418B97BC9001E827B /* InfoPlist.strings */; };
 		6E6B40C818B97BC9001E827B /* FeedlyClientExampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E6B40C718B97BC9001E827B /* FeedlyClientExampleTests.m */; };
+		6EBFE15D18BB74DD00C9FBCD /* NTAuthWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EBFE15C18BB74DD00C9FBCD /* NTAuthWebViewController.m */; };
+		708CAE2F6B10418DAA398270 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B994A4BA5D141E6A0449993 /* libPods.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +36,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0B994A4BA5D141E6A0449993 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		4BB9B182765C483AAC2AEECB /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 		6E6B409918B97BC9001E827B /* FeedlyClientExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FeedlyClientExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6E6B409C18B97BC9001E827B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		6E6B409E18B97BC9001E827B /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -53,6 +57,8 @@
 		6E6B40C318B97BC9001E827B /* FeedlyClientExampleTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "FeedlyClientExampleTests-Info.plist"; sourceTree = "<group>"; };
 		6E6B40C518B97BC9001E827B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		6E6B40C718B97BC9001E827B /* FeedlyClientExampleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FeedlyClientExampleTests.m; sourceTree = "<group>"; };
+		6EBFE15B18BB74DD00C9FBCD /* NTAuthWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NTAuthWebViewController.h; sourceTree = "<group>"; };
+		6EBFE15C18BB74DD00C9FBCD /* NTAuthWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NTAuthWebViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +125,8 @@
 				6E6B40B218B97BC9001E827B /* NTViewController.m */,
 				6E6B40B418B97BC9001E827B /* Images.xcassets */,
 				6E6B40A318B97BC9001E827B /* Supporting Files */,
+				6EBFE15B18BB74DD00C9FBCD /* NTAuthWebViewController.h */,
+				6EBFE15C18BB74DD00C9FBCD /* NTAuthWebViewController.m */,
 			);
 			path = FeedlyClientExample;
 			sourceTree = "<group>";
@@ -251,6 +259,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6E6B40B318B97BC9001E827B /* NTViewController.m in Sources */,
+				6EBFE15D18BB74DD00C9FBCD /* NTAuthWebViewController.m in Sources */,
 				6E6B40AD18B97BC9001E827B /* NTAppDelegate.m in Sources */,
 				6E6B40A918B97BC9001E827B /* main.m in Sources */,
 			);
@@ -461,6 +470,7 @@
 				6E6B40CD18B97BC9001E827B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		6E6B40CE18B97BC9001E827B /* Build configuration list for PBXNativeTarget "FeedlyClientExampleTests" */ = {
 			isa = XCConfigurationList;
@@ -469,6 +479,7 @@
 				6E6B40D018B97BC9001E827B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

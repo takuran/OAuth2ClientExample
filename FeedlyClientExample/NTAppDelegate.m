@@ -2,11 +2,47 @@
 //  NTAppDelegate.m
 //  FeedlyClientExample
 //
-//  Created by Naoyuki Takura on 2014/02/23.
-//  Copyright (c) 2014年 Naoyuki Takura. All rights reserved.
+// Copyright (c) 2014 Naoyuki Takura
+//
+// Permission is hereby granted, free of charge, to any person obtaining a copy of
+// this software and associated documentation files (the "Software"), to deal in
+// the Software without restriction, including without limitation the rights to
+// use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of
+// the Software, and to permit persons to whom the Software is furnished to do so,
+// subject to the following conditions:
+//
+// The above copyright notice and this permission notice shall be included in all
+// copies or substantial portions of the Software.
+//
+// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+// IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS
+// FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR
+// COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER
+// IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
+// CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 //
 
 #import "NTAppDelegate.h"
+#import "NXOAuth2.h"
+
+//for Feedly Oauth2(sandbox)
+//account type
+NSString * const kOauth2ClientAccountType = @"Feedly";
+//clientId
+static NSString * const kOauth2ClientClientId = @"sandbox";
+//Client Secret
+static NSString * const kOauth2ClientClientSecret = @"CM786L1D4P3M9VYUPOB8";
+//Redirect Url
+static NSString * const kOauth2ClientRedirectUrl = @"http://localhost";
+//base url
+static NSString * const kOauth2ClientBaseUrl = @"https://sandbox.feedly.com";
+//auth url
+static NSString * const kOauth2ClientAuthUrl = @"/v3/auth/auth";
+//token url
+static NSString * const kOauth2ClientTokenUrl = @"/v3/auth/token";
+//scope url
+static NSString * const kOauth2ClientScopeUrl = @"https://cloud.feedly.com/subscriptions";
+
 
 @implementation NTAppDelegate
 
@@ -41,6 +77,23 @@
 - (void)applicationWillTerminate:(UIApplication *)application
 {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+}
+
+
++ (void)initialize {
+    
+    NSString *authUrl = [kOauth2ClientBaseUrl stringByAppendingString:kOauth2ClientAuthUrl];
+    NSString *tokenUrl = [kOauth2ClientBaseUrl stringByAppendingString:kOauth2ClientTokenUrl];
+    
+    //setup oauth2client
+    [[NXOAuth2AccountStore sharedStore] setClientID:kOauth2ClientClientId
+                                             secret:kOauth2ClientClientSecret
+                                              scope:[NSSet setWithObjects:kOauth2ClientScopeUrl, nil]
+                                   authorizationURL:[NSURL URLWithString:authUrl]
+                                           tokenURL:[NSURL URLWithString:tokenUrl]
+                                        redirectURL:[NSURL URLWithString:kOauth2ClientRedirectUrl]
+                                     forAccountType:kOauth2ClientAccountType];
+
 }
 
 @end
